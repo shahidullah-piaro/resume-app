@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
-from ckeditor.fields import RichTextField
 
 
 class Skill(models.Model):
@@ -95,7 +94,7 @@ class Portfolio(models.Model):
     date = models.DateTimeField(blank=True, null=True)
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
-    body = RichTextField(blank=True, null=True)
+    bodyImage = models.ImageField(blank=True, null=True, upload_to="portfolio")
     image = models.ImageField(blank=True, null=True, upload_to="portfolio")
     slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
@@ -123,7 +122,7 @@ class Blog(models.Model):
     author = models.CharField(max_length=200, blank=True, null=True)
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
-    body = RichTextField(blank=True, null=True)
+    bodyImage = models.ImageField(blank=True, null=True, upload_to="portfolio")
     slug = models.SlugField(null=True, blank=True)
     image = models.ImageField(blank=True, null=True, upload_to="blog")
     is_active = models.BooleanField(default=True)

@@ -51,6 +51,13 @@ Start Content
           <h4 class="smTitle pb-3">{{object.timestamp.date}}</h4>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-auto">
+          <div class="authorCol">
+            <h4 class="smTitle pb-3">{{object.description}}</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -58,7 +65,7 @@ Start Content
 <section>
   <div class="sectionSpaceSm">
     <div class="container">
-      {{object.body|safe}}
+      <img src="{{object.bodyImage.url}}" alt="..." class="pImg">
     </div>
   </div>
 </section>

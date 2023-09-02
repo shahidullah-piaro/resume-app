@@ -14,7 +14,7 @@ END SEO blocks
 <!-- ================================
 Start CSS blocks
 ================================= -->
-{% block extend_header %}{% endblock %}
+{% block extend_header %}  {% endblock %}
 <!-- ================================
 END CSS blocks
 ================================= -->
@@ -39,6 +39,9 @@ Start Content
           <div class="bannerContent">
             <h1 class="xlTitle pb-md-3">{{object.name}}</h1>
           </div>
+          <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">{{object.description}}</h1>
+          </div>
         </div>
       </div>
     </div>
@@ -48,7 +51,7 @@ Start Content
 <section>
   <div class="sectionSpaceSm">
     <div class="container">
-      {{object.body|safe}}
+      <img src="{{object.bodyImage.url}}" alt="..." class="pImg">
     </div>
   </div>
 </section>
